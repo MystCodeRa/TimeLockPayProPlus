@@ -1,66 +1,36 @@
-## Foundry
+# ⏳ TimeLockPay Pro+ Smart Contracts
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+This repository contains the **backend smart contracts** for **TimeLockPay Pro+**, a decentralized payroll platform utilizing **time-locked USDC**, AI-driven activity scoring, and a fair reputation-based bonus system for contributors.
 
-Foundry consists of:
+> 💻 Tested on: **Local Foundry Network**  
+> 🌐 Live App: [TimeLockPay Pro+ Dashboard](https://timelockpayroll.netlify.app)
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+---
 
-## Documentation
+## 🔍 Features
 
-https://book.getfoundry.sh/
+- **Salary with Expiry:** Salaries are usable for 30 days only; after expiration, unused funds are locked or returned to the DAO.
+- **TimeLockVault.sol:** Stores salary funds and enforces time-based claim rules.
+- **ProofOfActivity.sol:** Tracks contributor behavior and calculates activity scores.
+- **BonusManager.sol:** Distributes performance-based bonuses.
+- **DAOManager.sol:** Redirects expired funds back to DAO-controlled addresses.
 
-## Usage
+---
 
-### Build
+## ⚙️ Tech Stack
 
-```shell
-$ forge build
-```
+- Solidity (v0.8.x)
+- Foundry (Forge)
+- Hardhat-compatible test logic
+- OpenZeppelin contracts
 
-### Test
+---
 
-```shell
-$ forge test
-```
+## 🚀 Getting Started
 
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+```bash
+git clone https://github.com/yourusername/timelockpay-backend
+cd timelockpay-backend
+forge install
+forge build
+forge test
