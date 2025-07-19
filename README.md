@@ -25,12 +25,3 @@ This repository contains the **backend smart contracts** for **TimeLockPay Pro+*
 - OpenZeppelin contracts
 
 ---
-
-## 🚀 Getting Started
-
-```bash
-git clone https://github.com/yourusername/timelockpay-backend
-cd timelockpay-backend
-forge install
-forge build
-forge test
